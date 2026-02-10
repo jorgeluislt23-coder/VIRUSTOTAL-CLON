@@ -55,6 +55,8 @@ A comprehensive web application that replicates the main functionalities of Viru
 
 ## 🚀 Quick Start
 
+> **⚠️ Important**: Both backend and frontend must be running for the application to work!
+
 ### Option 1: Manual Setup
 
 #### 1. Clone the repository
@@ -71,7 +73,7 @@ npm install
 # Create .env file from example
 cp .env.example .env
 
-# Edit .env and add your API keys
+# Edit .env and add your API keys (optional for basic functionality)
 nano .env
 ```
 
@@ -81,7 +83,7 @@ cd ../frontend
 npm install
 ```
 
-#### 4. Start the Application
+#### 4. Start the Application (requires 2 terminals)
 
 **Terminal 1 - Backend:**
 ```bash
@@ -96,6 +98,10 @@ cd frontend
 npm start
 # Frontend will run on http://localhost:3001
 ```
+
+**✅ Access the application**: Open http://localhost:3001 in your browser
+
+> **Note**: If you see "no me habla" (not responding), make sure both servers are running. See [QUICKSTART.md](QUICKSTART.md) for troubleshooting.
 
 ### Option 2: Docker Compose
 
