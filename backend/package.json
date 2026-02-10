@@ -28,8 +28,7 @@
     "ioredis": "^5.3.2",
     "mime-types": "^2.1.35",
     "exiftool-vendored": "^25.0.0",
-    "node-whois": "^2.5.0",
-    "dns": "^0.2.2",
+    "whois": "^2.13.7",
     "geoip-lite": "^1.4.7",
     "validator": "^13.11.0"
   },

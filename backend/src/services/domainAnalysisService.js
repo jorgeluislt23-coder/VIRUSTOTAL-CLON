@@ -1,5 +1,5 @@
 const dns = require('dns').promises;
-const whois = require('node-whois');
+const whois = require('whois');
 
 class DomainAnalysisService {
   /**
