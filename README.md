@@ -52,10 +52,13 @@ A comprehensive web application that replicates the main functionalities of Viru
 - Node.js 16.x or higher
 - npm or yarn
 - Docker and Docker Compose (optional)
+- Visual Studio Code (recommended) - [See VS Code Setup Guide](GUIA_VSCODE.md) 🇪🇸
 
 ## 🚀 Quick Start
 
 > **⚠️ Important**: Both backend and frontend must be running for the application to work!
+> 
+> **🇪🇸 ¿Usas Visual Studio Code?** Lee la [Guía completa de VS Code](GUIA_VSCODE.md) para instrucciones detalladas en español.
 
 ### Option 1: Manual Setup
 

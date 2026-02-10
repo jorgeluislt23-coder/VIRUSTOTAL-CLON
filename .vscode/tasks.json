@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Backend",
+      "type": "npm",
+      "script": "start",
+      "path": "backend/",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "servers"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Start Frontend",
+      "type": "npm",
+      "script": "start",
+      "path": "frontend/",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "servers"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Install Backend Dependencies",
+      "type": "npm",
+      "script": "install",
+      "path": "backend/",
+      "problemMatcher": []
+    },
+    {
+      "label": "Install Frontend Dependencies",
+      "type": "npm",
+      "script": "install",
+      "path": "frontend/",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test Backend",
+      "type": "npm",
+      "script": "test",
+      "path": "backend/",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Start All Servers",
+      "dependsOn": ["Start Backend", "Start Frontend"],
+      "problemMatcher": []
+    }
+  ]
+}

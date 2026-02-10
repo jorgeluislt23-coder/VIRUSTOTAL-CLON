@@ -32,7 +32,7 @@ tmp/
 temp/
 
 # IDE and Editor files
-.vscode/
+# .vscode/ - keeping this for workspace configuration
 .idea/
 *.swp
 *.swo
