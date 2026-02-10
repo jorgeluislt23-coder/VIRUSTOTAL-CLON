@@ -6,8 +6,13 @@
 ✅ **Status**: All production dependencies are secure and up-to-date.
 
 - **Multer**: Updated to v2.0.2 (patched version)
-  - Fixed DoS vulnerabilities (CVE-2024-XXXXX series)
+  - Fixed 4 DoS vulnerabilities
   - All security patches applied
+
+- **Axios**: Updated to v1.13.5 (patched version)
+  - Fixed DoS via __proto__ Key vulnerability
+  - Fixed DoS via lack of data size check
+  - Fixed SSRF and credential leakage vulnerabilities
 
 - **Latest Audit**: 0 vulnerabilities in production dependencies
 
