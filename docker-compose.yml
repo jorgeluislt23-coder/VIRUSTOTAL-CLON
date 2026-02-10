@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: virustotal_postgres
+    environment:
+      POSTGRES_DB: virustotal
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - virustotal_network
+
+  # MongoDB Database
+  mongodb:
+    image: mongo:6-alpine
+    container_name: virustotal_mongodb
+    environment:
+      MONGO_INITDB_DATABASE: virustotal
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - virustotal_network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: virustotal_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - virustotal_network
+
+  # Backend API (uncomment when ready)
+  # backend:
+  #   build: ./backend
+  #   container_name: virustotal_backend
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - NODE_ENV=development
+  #   volumes:
+  #     - ./backend:/app
+  #     - /app/node_modules
+  #   depends_on:
+  #     - postgres
+  #     - mongodb
+  #     - redis
+  #   networks:
+  #     - virustotal_network
+
+  # Frontend (uncomment when ready)
+  # frontend:
+  #   build: ./frontend
+  #   container_name: virustotal_frontend
+  #   ports:
+  #     - "3001:3001"
+  #   volumes:
+  #     - ./frontend:/app
+  #     - /app/node_modules
+  #   networks:
+  #     - virustotal_network
+
+volumes:
+  postgres_data:
+  mongodb_data:
+  redis_data:
+
+networks:
+  virustotal_network:
+    driver: bridge
